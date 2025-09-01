@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thejan Mihisara</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./thejan.jpg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Removed EmailJS. Load our script after HTML is parsed -->
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Mr. <span>Thejan</span></a>
+
+      <i class="bx bx-menu" id="menu-icon" aria-label="Toggle Menu"></i>
+
+      <nav class="navbar" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#websites">Websites</a>
+        <a href="#testimonials">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, I'm <span>Thejan Mihisara</span></h1>
+        <p>
+          Welcome to my portfolio! I specialize in building modern and user-friendly web applications with React and Node.js. With a strong focus on simplicity and functionality, I craft intuitive interfaces and efficient backend solutions.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/thejan-mihisara-14465533b/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/ThejanMihisara" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram-alt"></i></a>
+        </div>
+
+        <div class="btn-group">
+          <a href="mailto:thejanmihisara077@gmail.com" target="_blank" class="btn" rel="noopener noreferrer">Hire Me</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="./Thejan2.jpg" alt="Portrait of Thejan" />
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <h2 class="heading">Education</h2>
+
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2021</div>
+          <div class="timeline-content">
+            <h3>Primary Education</h3>
+            <p>
+              Devananda College, Ambalangoda<br />
+              G.C.E (Ordinary Level) Examination with ICT<br />
+              <b>Five "A" passes, three "B" passes, and one "C" pass</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2024</div>
+          <div class="timeline-content">
+            <h3>Secondary Education</h3>
+            <p>
+              Aloysius College, Matara<br />
+              G.C.E (Advanced Level), Physical Science Stream<br />
+              <b>Three “C” passes</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - Present</div>
+          <div class="timeline-content">
+            <h3>University</h3>
+            <p>
+              SLIIT City Uni (SCU), Colombo 3<br />
+              BSc (Hons) Computer Science
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h2 class="heading">Services</h2>
+
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <h4>Web Development</h4>
+            <p>
+              I provide tailored web development services, creating responsive, user-friendly websites and applications. Specializing in front-end and back-end development, I deliver secure, scalable solutions, including e-commerce and custom functionality. I collaborate closely with clients to ensure impactful digital experiences that meet their goals and drive success.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <div class="service-info">
+            <h4>UI / UX Design</h4>
+            <p>
+              I offer UI/UX design services that focus on creating intuitive and visually appealing digital experiences. By understanding client goals and target audiences, I deliver user-friendly interfaces and optimized user flows to enhance engagement and drive business success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="websites" id="websites">
+      <div class="websites-box">
+        <h2 class="heading"><span>MY</span> Websites/Apps</h2>
+        <div class="websites-wrapper" id="websitesList">
+          <script>
+            const websites = [
+              { name: "Supermarket-Online-Shopping-Website", img: "./supermarket.png", url: "https://github.com/ThejanMihisara/Supermarket-online-shopping--website.git" },
+              { name: "Student-Record-Management-System", img: "./Student.png", url: "https://github.com/ThejanMihisara/Student-Record-Management-System.git" },
+              { name: "MediCare-Plus", img: "./medicare.png", url: "https://github.com/ThejanMihisara/MediCare-Plus.git" },
+              { name: "Flag-Chooser-App", img: "./VCU.png", url: "https://udithavithanage.vercel.app/" }
+            ];
+            document.getElementById("websitesList").innerHTML = websites
+              .map(w => `
+                <div class="website-item">
+                  <a href="${w.url}" target="_blank" rel="noopener noreferrer">
+                    <img src="${w.img}" alt="${w.name}" />
+                    <h2>${w.name}</h2>
+                  </a>
+                </div>
+              `).join("");
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-box">
+        <h2 class="heading">Skills</h2>
+
+        <div class="websites-wrapper" id="skillsList">
+          <script>
+            const skills = [
+              { name: "HTML", img: "./html.png" },
+              { name: "CSS", img: "./css.png" },
+              { name: "JavaScript", img: "./js.png" },
+              { name: "React JS", img: "./react.png" },
+              { name: "Node JS", img: "./node.png" },
+              { name: "Tailwind CSS", img: "./tailwind.png" },
+              { name: "Express JS", img: "./express.png" },
+              { name: "MongoDB", img: "./mongodb.png" },
+              { name: "Git", img: "./git1.png" },
+              { name: "Bootstrap", img: "./Bootstrap_logo.svg.png" },
+              { name: "MySQL", img: "./MySQL-logo.png" },
+              { name: "EmailJs", img: "./emailjs.png" }
+            ];
+            document.getElementById("skillsList").innerHTML = skills
+              .map(s => `
+                <div class="website-item">
+                  <img src="${s.img}" alt="${s.name}" />
+                  <h2>${s.name}</h2>
+                </div>
+              `).join("");
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form id="ContactForm" novalidate>
+        <!-- Honeypot (spam trap): keep hidden in CSS -->
+        <input type="text" name="hp_website" id="hp_website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-10000px;opacity:0" />
+
+        <div class="input-group">
+          <div class="input-box">
+            <input id="name" name="name" type="text" placeholder="Full Name" required />
+            <input id="email" name="email" type="email" placeholder="Enter Your Email" required />
+          </div>
+          <div class="input-box">
+            <input id="phone" name="phone" type="tel" placeholder="Phone Number" />
+            <input id="title" name="title" type="text" placeholder="Subject" required />
+          </div>
+        </div>
+
+        <div class="input-group-2">
+          <textarea id="msg" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn" id="submitBtn">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://www.facebook.com/thejan.mihisara.7" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="https://www.tiktok.com/en/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-tiktok"></i></a>
+      </div>
+
+      <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Skills</a></li>
+      </ul>
+
+      <p class="copyright">
+        © <script>document.write(new Date().getFullYear());</script> Thejan Mihisara | All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>
